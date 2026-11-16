@@ -1,0 +1,24 @@
+:root{--bg:#f7f7f9;--fg:#1c1c22;--card:#fff;--bd:#d9d9e3;--ac:#4f46e5;--ok:#16a34a;--no:#dc2626;--mut:#6b7280;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#121216;--fg:#ececf1;--card:#1c1c24;--bd:#34343f;--mut:#9ca3af}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding:20px 16px 60px}
+h1{margin:.2em 0}.muted{color:var(--mut)}.center{text-align:center}
+textarea{width:100%;padding:12px;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--fg);font:inherit;resize:vertical}
+button{font:inherit;padding:10px 16px;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--fg);cursor:pointer;min-height:44px}
+button:hover:not(:disabled){border-color:var(--ac)}button:disabled{opacity:.6;cursor:not-allowed}
+button:focus-visible,textarea:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.primary{background:var(--ac);color:#fff;border-color:var(--ac)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0}
+.box{border:1px dashed var(--bd);border-radius:10px;padding:16px;margin:16px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.err{border:1px solid var(--no);display:block}
+.spinner{width:18px;height:18px;border:3px solid var(--bd);border-top-color:var(--ac);border-radius:50%;animation:s 1s linear infinite}
+@keyframes s{to{transform:rotate(360deg)}}
+.dim{opacity:.5;pointer-events:none}
+.tabs{display:flex;gap:8px;margin:12px 0}.tabs .on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.card{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;width:100%;min-height:200px;padding:24px;text-align:center;font-size:1.2rem;transition:transform .2s}
+.card.flipped{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 10%,var(--card))}
+.card small{color:var(--mut);text-transform:uppercase;letter-spacing:.08em}
+.opt{display:block;width:100%;text-align:left;margin:8px 0}
+.opt.right{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 18%,var(--card))}
+.opt.bad{border-color:var(--no);background:color-mix(in srgb,var(--no) 18%,var(--card))}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
