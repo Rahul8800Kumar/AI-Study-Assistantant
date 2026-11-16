@@ -25,7 +25,7 @@ Requires Node 20.6+ (uses `node --env-file`).
 | Stale response | Request id + `AbortController`; only the newest request may update state |
 
 ## AI-usage note
-(Edit honestly.) I used Claude to scaffold the project and first draft of components; I reviewed, ran and can explain every file. I wrote/changed: ______.
+(Edit honestly.) I used Claude to scaffold the project and first draft of components; I reviewed, ran and can explain every file. 
 
 ## Known limitations
 No streaming, no saved sessions, no refinement prompts, no automated tests, input capped at 8000 chars.
